@@ -11,8 +11,8 @@ const NavbarContainer = () => {
           <Navbar.Brand className="mr-auto logo-nav">D&D Bros Trucking</Navbar.Brand>
           <Nav className="mx-auto">
             <Nav.Link as={HLink} to="/#intro">Home</Nav.Link>
-            <Nav.Link as={HLink} to="/#about">Who we are</Nav.Link>
-            <Nav.Link as={HLink} to="/#service">Service Offerings</Nav.Link>
+            <Nav.Link as={HLink} to="/#about">Who We Are</Nav.Link>
+            <Nav.Link as={HLink} to="/#service">Services</Nav.Link>
             <Nav.Link as={HLink} to="/#testimonials">Testimonials</Nav.Link>
             <Nav.Link as={HLink} to="/#contact">Contact Us</Nav.Link>
             {/* links aren't navigating to the right page/section */}
