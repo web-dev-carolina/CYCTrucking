@@ -1,0 +1,56 @@
+#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem;
+}
+
+#infoDiv {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.introBtn {
+  width: 200px;
+  margin: 10px;
+  border: 2px solid #091133;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 30px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  background-color: white;
+}
+
+#contactUsBtn {
+  background-color: #111b47 !important;
+  border-radius: 2px;
+  color: white;
+}
+
+#introHeader {
+  font-family: Arial Black;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 49px;
+  letter-spacing: 2px;
+}
+
+#infoText {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #505f98;
+}
