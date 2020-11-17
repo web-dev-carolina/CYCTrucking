@@ -1,0 +1,29 @@
+#footer {
+    background: black;
+    width: 100%;
+    color: white;
+    height: auto;
+    overflow: hidden;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+img {
+    width: 60px;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
