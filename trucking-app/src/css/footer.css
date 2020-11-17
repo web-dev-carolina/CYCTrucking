@@ -6,6 +6,9 @@
     overflow: hidden;
     padding: 30px 0;
     box-sizing: border-box;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .logo-container {
