@@ -12,13 +12,10 @@ const Intro = () => {
         <img src={Logo} alt="D&D Bros Trucking" height="500px" width="500px" />
       </div>
       <div id="infoDiv">
-        <h2 id="introHeader">Introduce Your Service Quickly & Effectively</h2>
+        <h2 id="introHeader">Introduce Your Service</h2>
         <p id="infoText">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim.
+          commodo ligula eget dolor. Aenean massa.
         </p>
         <div id="buttonDiv">
           <button className="introBtn">Learn More</button>

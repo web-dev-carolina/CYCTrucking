@@ -7,15 +7,17 @@ import '../css/footer.css';
 const Footer = () => {
 
     return (
-        <div id="footer">
-            <div className="footer-content">
-                <div className="logo-container">
-                    <img src={logo}/>
-                </div>
-                <h3>D&D Bros</h3>
-                <p>Copyright &copy; 2020. Designed by Carolina WebDev</p>
-            </div>
-        </div>
+        <Container id="footer">
+            <Row className="footer-content">
+                <Col>
+                    <div className="logo-container">
+                        <img src={logo} />
+                    </div>
+                    <h3>D&D Bros</h3>
+                    <p>Copyright &copy; 2020. Designed by Web Dev Carolina</p>
+                </Col>
+            </Row>
+        </Container>
     );
 
 }
