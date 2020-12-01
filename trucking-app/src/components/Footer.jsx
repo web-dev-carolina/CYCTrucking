@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button'
 import { Row, Container, Col } from 'react-bootstrap';
 import { HashLink as HLink } from 'react-router-hash-link';
 import logo from '../images/logo-gif.gif'
-import '../css/footer.css';
+import '../styles/footer.css';
 const Footer = () => {
 
     return (
-        <Container id="footer">
+        <Container fluid id="footer">
             <Row className="footer-content">
                 <Col>
                     <div className="logo-container">

@@ -4,10 +4,10 @@ import Button from "react-bootstrap/Button";
 import { Row, Container, Col } from "react-bootstrap";
 import { HashLink as HLink } from "react-router-hash-link";
 import Logo from "../images/logo.jpg";
-import "../css/intro.css";
+import "../styles/intro.css";
 const Intro = () => {
   return (
-    <div id="intro">
+    <Container id="intro">
       <div id="logoDiv">
         <img src={Logo} alt="D&D Bros Trucking" height="500px" width="500px" />
       </div>
@@ -24,7 +24,7 @@ const Intro = () => {
           </button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 export default Intro;

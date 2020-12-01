@@ -1,15 +1,21 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Button from 'react-bootstrap/Button'
-import { Row, Container, Col } from 'react-bootstrap';
+import { Row, Container, Col, Button } from 'react-bootstrap';
 import { HashLink as HLink } from 'react-router-hash-link';
-import '../css/service.css';
+import '../styles/service.css';
 const Service = () => {
 
     return (
-        <div id="service">
-            <h2>Service Section</h2>
-        </div>
+        <Container id="service">
+            <h2>Services</h2>
+            <div id="services-list">
+                <ul>
+                    <li>Service 1</li>
+                    <li>Service 2</li>
+                </ul>
+            </div>
+            <Button>Pricing</Button>
+        </Container>
     );
 
 }
