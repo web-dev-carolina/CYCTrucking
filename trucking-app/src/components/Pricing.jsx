@@ -18,7 +18,7 @@ const Pricing = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let total = parseInt(movingPkg) + ease * loadTime + (movingPkg == 500 ? extraTruck : 0) + needsBoxes * boxesCost + mileCost * moveDist;
+        let total = parseInt(movingPkg) + ease * loadTime + (movingPkg === 500 ? extraTruck : 0) + needsBoxes * boxesCost + mileCost * moveDist;
         setTotalCost(Math.round(total));
     }
 
@@ -30,7 +30,7 @@ const Pricing = () => {
     return (
         <>
             <Container id="pricingForm" className="sectionContainer">
-                <h2>Price Estimator</h2>
+                <h2>Moving Price Estimator</h2>
                 <Form onSubmit={handleSubmit}>
                     <Form.Row>
                         <ul>
@@ -38,91 +38,88 @@ const Pricing = () => {
                         </ul>
                     </Form.Row>
                     <Form.Row>
+                        <Form.Group controlId="package">
+                            <Form.Label>Select your moving package based on the destination:</Form.Label>
+                            <Form.Control
+                                as="select"
+                                value={movingPkg}
+                                onChange={(e) => setMovingPkg(e.target.value)}
+                            >
+                                <option value={250}>POD (+0)</option>
+                                <option value={275}>Basic (+0) (&lt;1500 sq ft)</option>
+                                <option value={400}>Standard (+125) (&gt;1500 and &lt;3000 sq ft)</option>
+                                <option value={500}>Premium (+225) (&gt;3000 sq ft)</option>
+                            </Form.Control>
+                            <Form.Text muted>
+                                The base rate for POD is $250 and the base rate for a normal move is $275.
+                                    </Form.Text>
+                            <Form.Text muted>
+                                For the premium package, we assume 2 trucks are needed. This is an additional $100. This may not actually be the case.
+                                    </Form.Text>
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
                         <Col>
-
-                            <Form.Group controlId="package">
-                                <Form.Label>Select your moving package based on the destination:</Form.Label>
+                            <Form.Group controlId="ease">
+                                <Form.Label>Ease of move:</Form.Label>
                                 <Form.Control
                                     as="select"
-                                    value={movingPkg}
-                                    onChange={(e) => setMovingPkg(e.target.value)}
+                                    value={ease}
+                                    onChange={(e) => setEase(e.target.value)}
                                 >
-                                    <option value={250}>POD (+0)</option>
-                                    <option value={275}>Basic (+0) (&lt;1500 sq ft)</option>
-                                    <option value={400}>Standard (+125) (&gt;1500 and &lt;3000 sq ft)</option>
-                                    <option value={500}>Premium (+225) (&gt;3000 sq ft)</option>
+                                    <option value={.7}>POD ($.70/min)</option>
+                                    <option value={.5}>Easy ($.50/min)</option>
+                                    <option value={1.15}>Moderate ($1.15/min)</option>
+                                    <option value={2}>Difficult ($2/min)</option>
                                 </Form.Control>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group controlId="loadTime">
+                                <Form.Label>Estimated moving time:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter an estimated time in minutes"
+                                    value={loadTime}
+                                    onChange={(e) => setLoadTime(e.target.value)}
+                                />
                                 <Form.Text muted>
-                                    The base rate for POD is $250 and the base rate for a normal move is $275.
-                                </Form.Text>
-                                <Form.Text muted>
-                                    For the premium package, we assume 2 trucks are needed. This is an additional $100. This may not actually be the case.
+                                    This is the total moving time, excluding time spent traveling.
                                 </Form.Text>
                             </Form.Group>
-                            <Form.Row>
-                                <Col>
-                                    <Form.Group controlId="ease">
-                                        <Form.Label>Ease of move:</Form.Label>
-                                        <Form.Control
-                                            as="select"
-                                            value={ease}
-                                            onChange={(e) => setEase(e.target.value)}
-                                        >
-                                            <option value={.7}>POD ($.70/min)</option>
-                                            <option value={.5}>Easy ($.50/min)</option>
-                                            <option value={1.15}>Moderate ($1.15/min)</option>
-                                            <option value={2}>Difficult ($2/min)</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    <Form.Group controlId="loadTime">
-                                        <Form.Label>Estimated moving time:</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            placeholder="Enter an estimated time in minutes"
-                                            value={loadTime}
-                                            onChange={(e) => setLoadTime(e.target.value)}
-                                        />
-                                    </Form.Group>
-                                    <Form.Text muted>
-                                        This is the total moving time, excluding time spent traveling.
-                                    </Form.Text>
-                                </Col>
-                            </Form.Row>
-                            <Form.Row>
-                                <Col>
-                                    <Form.Group controlId="needsBoxes">
-                                        <Form.Label>Boxes supply:</Form.Label>
-                                        <Form.Control
-                                            as="select"
-                                            value={needsBoxes}
-                                            onChange={(e) => setNeedsBoxes(e.target.value)}
-                                        >
-                                            <option value={1}>We will provide the boxes</option>
-                                            <option value={0}>You will provide your own boxes</option>
-                                        </Form.Control>
-                                        <Form.Text muted>
-                                            We charge $45 extra if we're providing the boxes.
+                        </Col>
+                    </Form.Row>
+                    <Form.Row>
+                        <Col>
+                            <Form.Group controlId="needsBoxes">
+                                <Form.Label>Boxes supply:</Form.Label>
+                                <Form.Control
+                                    as="select"
+                                    value={needsBoxes}
+                                    onChange={(e) => setNeedsBoxes(e.target.value)}
+                                >
+                                    <option value={1}>We will provide the boxes</option>
+                                    <option value={0}>You will provide your own boxes</option>
+                                </Form.Control>
+                                <Form.Text muted>
+                                    We charge $45 extra if we're providing the boxes.
                                         </Form.Text>
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    <Form.Group controlId="moveDist">
-                                        <Form.Label>Moving distance:</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            placeholder="Enter the distance from A to B in miles"
-                                            value={moveDist}
-                                            onChange={(e) => setMoveDist(e.target.value)}
-                                        >
-                                        </Form.Control>
-                                        <Form.Text muted>
-                                            Travelling charge is $0.70/mile.
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group controlId="moveDist">
+                                <Form.Label>Moving distance:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter the distance from A to B in miles"
+                                    value={moveDist}
+                                    onChange={(e) => setMoveDist(e.target.value)}
+                                >
+                                </Form.Control>
+                                <Form.Text muted>
+                                    Travelling charge is $0.70/mile.
                                         </Form.Text>
-                                    </Form.Group>
-                                </Col>
-                            </Form.Row>
+                            </Form.Group>
                         </Col>
                     </Form.Row>
                     <Form.Row>
@@ -130,7 +127,10 @@ const Pricing = () => {
                             <Button block size="md" type="submit" variant="secondary" onClick={handleSubmit}> Estimate Total Price </Button>
                         </Col>
                         <Col className="center">
-                            <strong>Our Quote: ${totalCost}</strong>
+                            {totalCost === 0 ?
+                                <p></p> :
+                                <strong>Our Quote: ${totalCost}</strong>
+                            }
                         </Col>
                     </Form.Row>
                     <Form.Row>

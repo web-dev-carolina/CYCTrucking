@@ -3,7 +3,8 @@ import { HashLink as HLink } from 'react-router-hash-link';
 import { Route, Switch } from 'react-router-dom';
 import { Navbar, Nav, Image } from 'react-bootstrap';
 import Landing from '../pages/Landing.jsx';
-import Pricing from '../components/Pricing.jsx';
+import MovePricing from '../components/Pricing.jsx';
+import ArrangementPricing from '../components/Arrangement.jsx';
 import Logo from "../images/logo.jpg";
 
 const NavbarContainer = () => {
@@ -27,7 +28,8 @@ const NavbarContainer = () => {
       </Navbar>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/pricing" component={Pricing} />
+        <Route exact path="/pricing" component={MovePricing} />
+        <Route exact path="/arrangement" component={ArrangementPricing} />
       </Switch>
     </>
   )

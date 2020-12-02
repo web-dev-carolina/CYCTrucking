@@ -8,8 +8,12 @@ import '../styles/service.css';
 const Service = () => {
     const history = useHistory();
 
-    const handleClick = (e) => {
+    const handleMoveClick = (e) => {
         history.push('/pricing');
+    }
+
+    const handleArrangementClick = (e) => {
+        history.push('/arrangement');
     }
 
     return (
@@ -21,8 +25,8 @@ const Service = () => {
                     <li>Service 2: In-home arrangement</li>
                 </ul>
             </div>
-            <Button variant="outline-dark" onClick={handleClick}>Get a moving estimate</Button>
-            <Button variant="outline-dark" onClick={handleClick}>Get an arrangement estimate</Button>
+            <Button variant="outline-dark" onClick={handleMoveClick}>Get a moving estimate</Button>
+            <Button variant="outline-dark" onClick={handleArrangementClick}>Get an arrangement estimate</Button>
         </Container>
     );
 
