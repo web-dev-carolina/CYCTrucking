@@ -1,18 +1,19 @@
-#intro {
+/* #intro {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin: 2rem;
-}
+} */
 
 #infoDiv {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 50vw;
   width: 500px;
   align-items: center;
   justify-content: center;
+  margin-left: 3vw;
 }
 
 .introBtn {
@@ -32,7 +33,7 @@
 }
 
 #contactUsBtn {
-  background-color: #111b47 !important;
+  background-color: #091133 !important;
   border-radius: 2px;
   color: white;
 }
@@ -53,4 +54,19 @@
   font-size: 18px;
   line-height: 30px;
   color: #505f98;
+}
+
+#logoDiv {
+  flex-direction: column;
+  height: 40vw;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3vw;
+  display: flex;
+}
+
+#introLogo {
+  height: 200px;
+  width: auto;
 }

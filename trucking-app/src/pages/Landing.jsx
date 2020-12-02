@@ -5,7 +5,7 @@ import Service from '../components/Service';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import '../css/landing.css';
+import '../styles/landing.css';
 const Landing = () => {
 
     return(

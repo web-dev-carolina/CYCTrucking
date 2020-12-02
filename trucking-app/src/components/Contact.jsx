@@ -8,7 +8,7 @@ import '../styles/contact.css';
 const Contact = () => {
 
     return (
-        <Container id="contact">
+        <Container id="contact" className="sectionContainer">
             <h2>Contact Section</h2>
         </Container>
     );

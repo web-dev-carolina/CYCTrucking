@@ -6,7 +6,7 @@ import '../styles/testimonials.css';
 const Testimonials = () => {
 
     return (
-        <Container id="testimonials">
+        <Container id="testimonials" className="sectionContainer">
             <h2>Testimonials Section</h2>
         </Container>
     );
