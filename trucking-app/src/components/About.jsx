@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <Container id="about" className="sectionContainer">
-            <h2>About Section</h2>
+            <h2 className="sectionHeader">About</h2>
         </Container>
     );
 

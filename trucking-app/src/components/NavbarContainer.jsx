@@ -6,13 +6,14 @@ import Landing from '../pages/Landing.jsx';
 import MovePricing from '../components/Pricing.jsx';
 import ArrangementPricing from '../components/Arrangement.jsx';
 import Logo from "../images/logo.jpg";
+import '../styles/NavbarContainer.css';
 
 const NavbarContainer = () => {
 
   return (
     <>
       <Navbar sticky="top" bg="light" variant="light" expand="md" collapseOnSelect>
-        <Image src={Logo} roundedCircle height="10vh"/>
+        {/* <Image src={Logo} roundedCircle height="10vh"/> */}
         <Navbar.Brand className="mr-auto logo-nav">&ensp;D&D Bros Trucking</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>

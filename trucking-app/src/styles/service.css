@@ -1,0 +1,11 @@
+.serviceImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30%;
+    width: 30%;
+}
+
+.centerText {
+    text-align: center;
+}

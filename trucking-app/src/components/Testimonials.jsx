@@ -7,7 +7,7 @@ const Testimonials = () => {
 
     return (
         <Container id="testimonials" className="sectionContainer">
-            <h2>Testimonials Section</h2>
+            <h2 className="sectionHeader">Testimonials</h2>
         </Container>
     );
 

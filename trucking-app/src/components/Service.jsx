@@ -1,32 +1,32 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import { Row, Container, Col, Button } from 'react-bootstrap';
-import { HashLink as HLink } from 'react-router-hash-link';
-import { useHistory } from "react-router-dom";
+import { Row, Container, Col, Image } from 'react-bootstrap';
 import '../styles/service.css';
+import House from "../images/HouseIllustration.png";
+import Truck from "../images/Truck.png";
 
 const Service = () => {
-    const history = useHistory();
-
-    const handleMoveClick = (e) => {
-        history.push('/pricing');
-    }
-
-    const handleArrangementClick = (e) => {
-        history.push('/arrangement');
-    }
 
     return (
         <Container id="service" className="sectionContainer">
-            <h2>Services</h2>
-            <div id="services-list">
-                <ul>
-                    <li>Service 1: Residential moving</li>
-                    <li>Service 2: In-home arrangement</li>
-                </ul>
-            </div>
-            <Button variant="outline-dark" onClick={handleMoveClick}>Get a moving estimate</Button>
-            <Button variant="outline-dark" onClick={handleArrangementClick}>Get an arrangement estimate</Button>
+            <h2 className="sectionHeader">Services</h2>
+            <Row id="services-list">
+                <Col md={6} className="servicesColumn">
+                    <Image src={Truck} className="serviceImage"></Image>
+                    <br></br>
+                    <div className="centerText">
+                        <h4 className="">Moving</h4>
+                        <p className="">We can help you with all the basic moving logistics - <a href="/pricing">Get a moving estimate</a></p>
+                    </div>
+                </Col>
+                <Col md={6} className="servicesColumn">
+                    <Image src={House} className="serviceImage"></Image>
+                    <br></br>
+                    <div className="centerText">
+                        <h4 className="">Arrangement</h4>
+                        <p className="">We can help you get all your furniture arranged at your destination - <a href="/arrangement">Get an arrangement estimate</a></p>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     );
 

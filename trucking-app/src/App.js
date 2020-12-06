@@ -11,12 +11,13 @@ function App() {
   }, [])
   return (
     <>
-    {loading === false ? (
+    {/* { !loading ? (
       <NavbarContainer>
       </NavbarContainer>
     ) : (
       <LoadingScreen />
-    )}
+    )} uses a loading screen*/}
+    <NavbarContainer></NavbarContainer>
     </>
   );
 }
