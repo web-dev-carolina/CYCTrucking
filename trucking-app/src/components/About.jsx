@@ -9,6 +9,7 @@ const About = () => {
     return (
         <Container id="about" className="sectionContainer">
             <h2 className="sectionHeader">About</h2>
+            We are a veteran- and black-owned start-up focused on delivering a pleasant moving experience for all of our clients. We emphasized reliability, freidliness, care, flexibility, and trustworthiness.
         </Container>
     );
 

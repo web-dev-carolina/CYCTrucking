@@ -9,7 +9,7 @@
 #infoDiv {
   display: flex;
   flex-direction: column;
-  height: 50vw;
+  height: 45vw;
   width: 500px;
   align-items: center;
   justify-content: center;
@@ -45,6 +45,15 @@
   font-size: 48px;
   line-height: 49px;
   letter-spacing: 2px;
+}
+
+#introSubheader {
+  text-align: center;
+  font-family: Arial Black;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 #infoText {
