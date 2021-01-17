@@ -7,10 +7,10 @@ const Intro = () => {
     <Container id="intro" className="sectionContainer">
       <Row>
         <Col sm={12} md={3} id="logoDiv">
-            <Image id="introLogo" src={Logo} alt="d&d bros logo" rounded/>
+            <Image id="introLogo" src={Logo} alt="d&amp;d bros logo" rounded/>
         </Col>
         <Col sm={12} md={8} id="infoDiv">
-            <h2 id="introHeader">D&D Bros</h2>
+            <h2 id="introHeader">D&amp;D Bros</h2>
             <h3 id="introSubheader">Trucking and Moving Service</h3>
             {/* <p id="infoText">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean

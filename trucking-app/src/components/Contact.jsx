@@ -1,8 +1,8 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+// import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button'
 import { Row, Container, Col, Form } from 'react-bootstrap';
-import { HashLink as HLink } from 'react-router-hash-link';
+// import { HashLink as HLink } from 'react-router-hash-link';
 import '../styles/contact.css';
 
 const Contact = () => {
@@ -15,8 +15,8 @@ const Contact = () => {
             </Row>
             <Row>
                 <Col>
-                    <h5 id="contactCaption">Please leave your name, email, and any comments or concerns. We will get back to
-you as soon as possible!</h5> 
+                    <h3 id="contactCaption">Please leave your name, email, and any comments or concerns. We will get back to
+you as soon as possible!</h3> 
 </Col>
             </Row>
             <Row>

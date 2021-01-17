@@ -82,7 +82,7 @@ const Arrangement = () => {
                             <Button block size="md" type="submit" variant="secondary" onClick={handleSubmit}> Estimate Total Price </Button>
                         </Col>
                         <Col className="center">
-                            {totalCost == 0 ?  
+                            {totalCost === 0 ?  
                                 <p></p> :  
                                 <strong>Our Quote: ${totalCost}</strong>
                             }

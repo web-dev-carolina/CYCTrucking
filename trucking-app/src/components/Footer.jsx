@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import { Row, Container, Col } from 'react-bootstrap';
-import { HashLink as HLink } from 'react-router-hash-link';
+// import { HashLink as HLink } from 'react-router-hash-link';
 import logo from '../images/logo.png'
 import '../styles/footer.css';
 const Footer = () => {
@@ -11,11 +11,11 @@ const Footer = () => {
             <Row className="footer-content">
                 <Col md={6}>
                     <div className="logo-container">
-                        <img src={logo} />
+                        <img src={logo} alt="logo"/>
                     </div>
                 </Col>
                 <Col md={6}>    
-                    <h3>D&D Bros</h3>
+                    <h3>D&amp;D Bros</h3>
                     <p>Copyright &copy; 2020. Designed by Web Dev Carolina</p>
                 </Col>
             </Row>
