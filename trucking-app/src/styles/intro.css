@@ -9,15 +9,18 @@
 #infoDiv {
   display: flex;
   flex-direction: column;
-  height: 45vw;
-  width: 500px;
+  height: auto;
+  width: 100vw;
   align-items: center;
   justify-content: center;
-  margin-left: 3vw;
+  padding-right: 15vw;
+  padding-top: 5vh;
+  /* margin-left: 3vw; */
+  /* margin-top: 15vh; */
 }
 
-.introBtn {
-  width: 200px;
+/* .introBtn {
+  width: 100vw;
   margin: 10px;
   border: 2px solid #091133;
   box-sizing: border-box;
@@ -30,13 +33,13 @@
   line-height: 26px;
   text-align: center;
   background-color: white;
-}
+} */
 
-#contactUsBtn {
+/* #contactUsBtn {
   background-color: #091133 !important;
   border-radius: 2px;
   color: white;
-}
+} */
 
 #introHeader {
   font-family: Arial Black;
@@ -67,15 +70,17 @@
 
 #logoDiv {
   flex-direction: column;
-  height: 40vw;
+  height: auto;
   width: auto;
   align-items: center;
   justify-content: center;
-  margin-left: 3vw;
+  /* margin-left: 3vw; */
+  padding-top: 15vh;
+  /* margin-bottom: 10vh; */
   display: flex;
 }
 
 #introLogo {
-  height: 200px;
+  height: 30vh;
   width: auto;
 }

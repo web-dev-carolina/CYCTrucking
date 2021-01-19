@@ -1,12 +1,4 @@
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 30%;
-    width: 30%;
-}
-
-#contactCaption {
-    text-align: center;
-    font-weight: normal;
+#contact {
+    display: flex;
+    margin-bottom: 50px;
 }

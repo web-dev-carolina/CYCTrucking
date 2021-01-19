@@ -1,26 +1,16 @@
-import React from 'react';
-// import Button from 'react-bootstrap/Button'
-import { Row, Container, Col } from 'react-bootstrap';
-// import { HashLink as HLink } from 'react-router-hash-link';
-import logo from '../images/logo.png'
-import '../styles/footer.css';
+import React from "react";
+import { Card, Container } from "react-bootstrap";
+
 const Footer = () => {
+  return (
+      <Card id="footer" bg="light" text="dark" className="fixed-bottom">
+        <Card.Body>
+          <Container>
+            <Card.Text>Created by Web Dev Carolina. Copyright &copy; 2021</Card.Text>
+          </Container>
+        </Card.Body>
+      </Card>
+  );
+};
 
-    return (
-        <Container fluid id="footer" className="sectionContainer">
-            <Row className="footer-content">
-                <Col md={6}>
-                    <div className="logo-container">
-                        <img src={logo} alt="logo"/>
-                    </div>
-                </Col>
-                <Col md={6}>    
-                    <h3>D&amp;D Bros</h3>
-                    <p>Copyright &copy; 2020. Designed by Web Dev Carolina</p>
-                </Col>
-            </Row>
-        </Container>
-    );
-
-}
 export default Footer;

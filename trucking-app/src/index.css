@@ -10,9 +10,9 @@ code {
 }
 
 .sectionContainer {
-  background-color: rgb(246, 247, 249);
-  margin: 2vw 0;
-  padding: 2vw 2vw;
+  /* background-color: rgb(246, 247, 249); */
+  /* margin: 2vw 0; */
+  /* padding: 2vw 2vw; */
   height: fit-content;
 }
 
@@ -20,6 +20,6 @@ code {
   font-family: Arial Black;
   font-style: normal;
   font-weight: 900;
-  font-size: 35px;
+  font-size: 2rem !important;
   padding-bottom: 2%;
 }

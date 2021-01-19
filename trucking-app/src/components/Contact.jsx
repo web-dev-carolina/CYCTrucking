@@ -1,49 +1,89 @@
-import React from 'react';
-// import Jumbotron from 'react-bootstrap/Jumbotron';
-import Button from 'react-bootstrap/Button'
-import { Row, Container, Col, Form } from 'react-bootstrap';
-// import { HashLink as HLink } from 'react-router-hash-link';
-import '../styles/contact.css';
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import { Container, Card, Form } from "react-bootstrap";
+import "../styles/contact.css";
 
 const Contact = () => {
-    return (
-        <Container id='contactsection' className="sectionContainer">
-            <Row>
-                <Col>
-                    <h2 className="sectionHeader">Contact Us</h2>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <h3 id="contactCaption">Please leave your name, email, and any comments or concerns. We will get back to
-you as soon as possible!</h3> 
-</Col>
-            </Row>
-            <Row>
-                <Col xs={12} md={6} className="center">
-                    <Form
-                    // onSubmit={handleSubmit}
-                    >
-                        <Form.Group controlId="formBasicName">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type="name" placeholder="Johnny Appleseed" />
-                        </Form.Group>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="johnny@appleseed.com" />
-                        </Form.Group>
-                        <Form.Group controlId="controlTextarea1">
-                            <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" type="message" placeholder="Enter your message here" />
-                        </Form.Group>
-                        <Button variant="secondary" type="submit" className="center">
-                            Send
-                        </Button>
-                    </Form>
-                </Col>
-            </Row>
-        </Container>
-    )
-}
+  const axios = require("axios");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (!name || !email || !message) {
+      alert("Error: Each field must be filled in.");
+      return;
+    }
+    return axios({
+      method: "post",
+      // baseURL: "http://localhost:5001/personal-site-fda9e/us-central1",
+      baseURL: "https://us-central1-personal-site-fda9e.cloudfunctions.net",
+      url: "/sendEmailDDBros",
+      data: {
+        name: name,
+        email: email,
+        message: message,
+      },
+    })
+      .then(() =>
+        alert(
+          `Thanks for messaging us ${name}! We'll be in touch shortly at ${email}.`
+        )
+      )
+      .catch((err) => console.error(err));
+  };
+
+  return (
+    <Container className="mx-auto" id="contact">
+      <Card style={{ border: "none" }}>
+        <Card.Body>
+          <Card.Title className="sectionHeader">Contact Us!</Card.Title>
+          <Container id="contactForm">
+            <Form onSubmit={submitForm}>
+              <Form.Group style={{ width: "20vw" }}>
+                <Form.Label>
+                  Name
+                  <Form.Control
+                    type="text"
+                    placeholder="Name"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </Form.Label>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicEmail" style={{ width: "20vw" }}>
+                <Form.Label>
+                  Email address
+                  <Form.Control
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Form.Label>
+              </Form.Group>
+
+              <Form.Group
+                controlId="exampleForm.ControlTextarea1"
+                style={{ width: "50vw" }}
+              >
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Please leave your name, email, and any comments or concerns. We will get back to
+                    you as soon as possible!"
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+              </Form.Group>
+              <Button variant="dark" type="submit">
+                Submit
+              </Button>
+            </Form>
+          </Container>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
 
 export default Contact;

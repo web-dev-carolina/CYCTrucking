@@ -1,6 +1,10 @@
 .logo-nav {
     font-family: Arial Black;
     font-style: normal;
-    font-weight: 900;
     font-size: 20px;
+}
+
+#navbar {
+    font-weight: bold;
+    background-color: lightgray;
 }
