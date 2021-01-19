@@ -1,19 +1,16 @@
-# D&D Bros Trucking Website
+# [D&D Bros Trucking Company Website](https://danddbros.com/)
 
-## Commands
+## Description
 
-### `npm run init`
+The UNC Web Development club has worked remotely with [Consult Your Community UNC](https://cycunc.org/) (CYC UNC) to create a website for a local veteran- and black-owned trucking company.
 
-Install dependencies and login to firebase
+## Npm scripts
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm run serve`
-
-Optimize app and serve on [http://localhost:5000](http://localhost:5000)
+- Install dependencies and login to firebase
+  - **npm run init**
+- Run React app with live reload on localhost
+  - **npm start**
+- Build optimized React app and run on localhost
+  - **npm run serve**
+- Build optimized React app and deploy to live site
+  - **npm run deploy**

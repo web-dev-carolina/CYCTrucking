@@ -40,7 +40,7 @@ const Contact = () => {
           <Card.Title className="sectionHeader">Contact Us!</Card.Title>
           <Container id="contactForm">
             <Form onSubmit={submitForm}>
-              <Form.Group style={{ width: "20vw" }}>
+              <Form.Group>
                 <Form.Label>
                   Name
                   <Form.Control
@@ -51,7 +51,7 @@ const Contact = () => {
                 </Form.Label>
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail" style={{ width: "20vw" }}>
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>
                   Email address
                   <Form.Control
@@ -70,8 +70,7 @@ const Contact = () => {
                 <Form.Control
                   as="textarea"
                   rows={3}
-                  placeholder="Please leave your name, email, and any comments or concerns. We will get back to
-                    you as soon as possible!"
+                  placeholder="Send us any questions, comments, or concerns and we will get back to you as soon as possible!"
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>

@@ -1,10 +1,10 @@
 import React from 'react';
-import Intro from '../components/Intro';
-import About from '../components/About';
-import Service from '../components/Service';
+import Intro from './Intro';
+import About from './About';
+import Service from './Service';
 // import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Contact from './Contact';
+import Footer from './Footer';
 import '../styles/landing.css';
 const Landing = () => {
 

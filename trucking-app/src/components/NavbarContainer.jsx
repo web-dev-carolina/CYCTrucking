@@ -2,9 +2,9 @@ import React from "react";
 import { HashLink as HLink } from "react-router-hash-link";
 import { Route, Switch } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
-import Landing from "../pages/Landing.jsx";
-import MovePricing from "../components/Pricing.jsx";
-import ArrangementPricing from "../components/Arrangement.jsx";
+import Landing from "./Landing";
+import MovePricing from "./Pricing";
+import ArrangementPricing from "./Arrangement";
 import "../styles/NavbarContainer.css";
 
 const NavbarContainer = () => {
@@ -19,11 +19,11 @@ const NavbarContainer = () => {
         collapseOnSelect
       >
         <Navbar.Brand className="mr-auto logo-nav">
-          <Nav.Link as={HLink} to="/#intro" style={{color: "black"}}>
+          <Nav.Link as={HLink} to="/#intro" style={{ color: "black" }}>
             &ensp;D&amp;D Bros Trucking
           </Nav.Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="mr-auto">
             <Nav.Link className="navLink" as={HLink} to="/#about">
