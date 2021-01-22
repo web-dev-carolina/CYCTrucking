@@ -16,13 +16,13 @@ const Contact = () => {
     }
     return axios({
       method: "post",
-      // baseURL: "http://localhost:5001/personal-site-fda9e/us-central1",
       baseURL: "https://us-central1-personal-site-fda9e.cloudfunctions.net",
-      url: "/sendEmailDDBros",
+      url: "/sendFormEmail",
       data: {
         name: name,
         email: email,
         message: message,
+        destEmail: "email@danddbros.com",
       },
     })
       .then(() =>
